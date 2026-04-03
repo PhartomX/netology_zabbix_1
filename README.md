@@ -3,7 +3,7 @@
 
 ### Задание 1
 
-`Установите Zabbix Server с веб-интерфейсом.'
+Установите Zabbix Server с веб-интерфейсом.
 
 Процесс выполнения
 Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
@@ -12,7 +12,7 @@
 Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
 
 ```
-'Tекст использованных команд:'
+Tекст использованных команд:
 
 sudo -s
 wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
@@ -24,11 +24,16 @@ su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD
 '\'qwertyui\'';"'
 su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
 zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+sed -i 's/# DBPassword=/DBPassword=qwertyui/g' /etc/zabbix/zabbix_server.conf
+sudo systemctl restart zabbix-server nginx.service
+sudo systemctl enable zabbix-server
+
 
 ```
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
+При необходимости прикрепитe сюда скриншоты
+![img1](/home/user/Documents/Projects/netology_zabbix_1/img/img1.png)
+![img2](/home/user/Documents/Projects/netology_zabbix_1/img/img2.png)
 
 
 ---
