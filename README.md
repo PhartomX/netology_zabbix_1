@@ -31,9 +31,9 @@ sudo systemctl enable zabbix-server
 
 ```
 
-При необходимости прикрепитe сюда скриншоты
-![img1](/home/user/Documents/Projects/netology_zabbix_1/img/img1.png)
-![img2](/home/user/Documents/Projects/netology_zabbix_1/img/img2.png)
+Cкриншоты авторизации в админке:
+![img1](https://github.com/PhartomX/netology_zabbix_1/blob/main/img/img1.png)
+![img2](https://github.com/PhartomX/netology_zabbix_1/blob/main/img/img2.png)
 
 
 ---
