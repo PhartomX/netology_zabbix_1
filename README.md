@@ -11,8 +11,9 @@
 Пользуясь конфигуратором команд с официального сайта, составьте набор команд для установки последней версии Zabbix с поддержкой PostgreSQL и Apache.
 Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
 
-```
+
 Tекст использованных команд:
+
 ```
 sudo -s
 wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
@@ -27,8 +28,6 @@ zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psq
 sed -i 's/# DBPassword=/DBPassword=qwertyui/g' /etc/zabbix/zabbix_server.conf
 sudo systemctl restart zabbix-server nginx.service
 sudo systemctl enable zabbix-server
-
-
 ```
 
 Cкриншоты авторизации в админке:
