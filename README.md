@@ -12,6 +12,8 @@
 4. Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
 
 
+
+
 `Tекст использованных команд:`
 
 ```
@@ -30,8 +32,12 @@ sudo systemctl restart zabbix-server nginx.service
 sudo systemctl enable zabbix-server
 ```
 
+
 `Cкриншоты авторизации в админке:`
+
+
 ![img1](https://github.com/PhartomX/netology_zabbix_1/blob/main/img/img1.png)
+
 ![img2](https://github.com/PhartomX/netology_zabbix_1/blob/main/img/img2.png)
 
 
