@@ -54,25 +54,30 @@ sudo systemctl enable zabbix-server
 4. Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.
 5. Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.
 
-
+`Установка агента:`
 ```
-Поле для вставки кода...
-....
-....
-....
-....
+sudo -s 
+wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
+dpkg -i zabbix-release_latest_7.4+ubuntu24.04_all.deb
+apt update 
+apt install zabbix-agent
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent 
 ```
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 2](ссылка на скриншот 2)`
+`Cкриншот раздела Monitoring > Hosts:`
 
+![img3](https://github.com/PhartomX/netology_zabbix_1/blob/main/img/img3.png)
+
+`Cкриншоты логов zabbix agent:`
+
+![img4](https://github.com/PhartomX/netology_zabbix_1/blob/main/img/img4.png)
+
+![img5](https://github.com/PhartomX/netology_zabbix_1/blob/main/img/img5.png)
+
+
+`Cкриншот раздела Monitoring > Latest data:`
+
+![img6](https://github.com/PhartomX/netology_zabbix_1/blob/main/img/img6.png)
 
 ---
-
-### Задание 3
-
-`Установите Zabbix Agent на Windows (компьютер) и подключите его к серверу Zabbix.`
-
-
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота](ссылка на скриншот)`
